@@ -9,6 +9,8 @@ metadata:
 spec:
   containers:
     - name: postgres-pod
-      image: postgres:9.4
+      image: postgres:9.6-alpine
+      environment:
+        POSTGRES_HOST_AUTH_METHOD: "trust"
       ports:
         - containerPort: 5432
